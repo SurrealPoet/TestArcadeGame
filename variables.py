@@ -1,8 +1,6 @@
 import pygame
 
 
-global FPSCLOCK, DISPLAYSURF
-
 FPS = 60
 WINDOWWIDTH = 900
 WINDOWHEIGHT = 900
