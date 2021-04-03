@@ -25,3 +25,22 @@ class Player:
         pass
         # return self.x, self.y
 
+
+def create_player_list():
+    num_players = int(input('number of players'))
+    player_list = list(range(1, (num_players + 1)))
+    print(player_list)
+
+    dicts = {}
+    keys = range(0, num_players)
+    print(keys)
+    values = ["Hi", "I", "am", "John"]
+    print(values)
+    for i in keys:
+        dicts[i + 1] = values[i]
+    print(dicts)
+
+    # player_names = for num in player_list:
+    #                     list()
+
+

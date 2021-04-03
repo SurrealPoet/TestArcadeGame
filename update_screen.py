@@ -25,6 +25,7 @@ def run_game():
                 if event.key == pygame.K_a:
                     p3.set_location(-10, 0)
         draw_screen(p3)
+        # player.create_player_list()
 
 
 def draw_screen(name):
