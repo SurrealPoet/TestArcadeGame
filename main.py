@@ -10,7 +10,7 @@ def main():
     pygame.init()
     pygame.key.set_repeat(100)
 
-    variables.DISPLAYSURF.fill(variables.BGCOLOR)
+
     pygame.display.set_caption('Shoot\'em Game')
     mousex = 0
     mousey = 0

@@ -24,6 +24,13 @@ def run_game():
                     p3.set_location(10, 0)
                 if event.key == pygame.K_a:
                     p3.set_location(-10, 0)
-        variables.DISPLAYSURF.fill(variables.BGCOLOR)
-        p3.draw_player()
-        pygame.display.update()
+        draw_screen(p3)
+
+
+def draw_screen(name):
+    variables.DISPLAYSURF.fill(variables.BGCOLOR)
+    name.draw_player()
+    pygame.display.update()
+
+
+
