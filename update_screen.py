@@ -7,7 +7,6 @@ import variables
 def run_game():
     p3 = player.Player(x=200, y=200, color=variables.RED)
     p3.draw_player()
-    p3.set_location(1, 1)
     running = True
     while running:
         for event in pygame.event.get():
@@ -15,16 +14,27 @@ def run_game():
                 pygame.quit()
                 sys.exit()
             if event.type == pygame.KEYDOWN:
-                # print(event.key)
                 if event.key == pygame.K_w:
-                    p3.set_location(0, -10)
+                    p3.up_is_pressed = True
                 if event.key == pygame.K_s:
-                    p3.set_location(0, 10)
-                if event.key == pygame.K_d:
-                    p3.set_location(10, 0)
+                    p3.down_is_pressed = True
                 if event.key == pygame.K_a:
-                    p3.set_location(-10, 0)
+                    p3.left_is_pressed = True
+                if event.key == pygame.K_d:
+                    p3.right_is_pressed = True
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_w:
+                    p3.up_is_pressed = False
+                if event.key == pygame.K_s:
+                    p3.down_is_pressed = False
+                if event.key == pygame.K_a:
+                    p3.left_is_pressed = False
+                if event.key == pygame.K_d:
+                    p3.right_is_pressed = False
+
+        p3.move_player()
         draw_screen(p3)
+        pygame.time.Clock().tick(variables.FPS)
         # player.create_player_list()
 
 

@@ -8,17 +8,7 @@ import variables
 
 def main():
     pygame.init()
-    pygame.key.set_repeat(100)
-
-
     pygame.display.set_caption('Shoot\'em Game')
-    mousex = 0
-    mousey = 0
-    # p1 = Player()
-    # p1.set_player(450, 450, RED)
-    # p2 = Player()
-    # p2.set_player(200, 200, GREEN)
-    # p1.get_location()
     update_screen.run_game()
 
 

@@ -2,6 +2,7 @@ import pygame
 
 
 FPS = 60
+MOVESPEED = 3
 WINDOWWIDTH = 900
 WINDOWHEIGHT = 900
 PLAYERSIZE = 20
@@ -19,5 +20,4 @@ PURPLE = (255, 0, 255)
 CYAN = (0, 255, 255)
 BLACK = (0, 0, 0)
 
-FPSCLOCK = pygame.time.Clock()
 DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
